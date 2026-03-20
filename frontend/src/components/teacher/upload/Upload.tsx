@@ -7,7 +7,7 @@ export function Upload() {
       <div className="flex items-center gap-3">
         <img src={logo} alt="Red.ink logo" className="w-10 h-10" />
         <h1 className="text-4xl font-bold tracking-tight text-red-500">
-          Red.ink
+          red.ink
         </h1>
       </div>
 
