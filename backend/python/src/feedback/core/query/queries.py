@@ -1,9 +1,9 @@
 import json
 import re
 
-from refactor.feedback.core.ml.llm import llm
-from refactor.feedback.core.ml.nlp import clean_tags
-from refactor.feedback.core.query.prompts import (
+from feedback.core.ml.llm import llm
+from feedback.core.ml.nlp import clean_tags
+from feedback.core.query.prompts import (
     ANALYSIS_PROMPT,
     FEEDBACK_PROMPT,
     NEUTRAL_PROMPT,

@@ -1,13 +1,13 @@
 # ruff: noqa: B008
 
 from fastapi import APIRouter, File, HTTPException, UploadFile
-from refactor.feedback.config import get_feedback_index, get_feedback_tag
-from refactor.feedback.core.ml.llm import llm
-from refactor.feedback.core.ml.nlp import to_sentences
-from refactor.feedback.core.query.queries import generate_response_feedback
-from refactor.feedback.schemas.response import Annotation, CheckResponse
-from refactor.feedback.utils.parse import read_docx
-from refactor.feedback.utils.tag import tag_analysis
+from feedback.config import get_feedback_index, get_feedback_tag
+from feedback.core.ml.llm import llm
+from feedback.core.ml.nlp import to_sentences
+from feedback.core.query.queries import generate_response_feedback
+from feedback.schemas.response import Annotation, CheckResponse
+from feedback.utils.parse import read_docx
+from feedback.utils.tag import tag_analysis
 
 SIM_THRESHOLD = 0.8
 
