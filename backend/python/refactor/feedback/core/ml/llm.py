@@ -1,3 +1,5 @@
+from functools import cached_property
+
 import numpy as np
 import ollama
 from ollama import ChatResponse, chat
@@ -43,3 +45,11 @@ class LLM:
             resp = ollama.embed(model=self.embedding_model, input=text, truncate=True)
             embs.append(resp.embeddings[0])
         return np.array(embs, dtype="float32")
+
+    @cached_property
+    def embedding_dimension(self) -> int:
+        resp = ollama.embed(model=self.embedding_model, input=" ", truncate=True)
+        return len(resp.embeddings[0])
+
+
+llm = LLM()

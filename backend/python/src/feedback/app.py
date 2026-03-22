@@ -1,3 +1,5 @@
+# ruff: noqa: B008
+
 import logging
 import os
 from contextlib import asynccontextmanager
@@ -116,9 +118,9 @@ def health():
 
 @app.post("/ingest")
 async def ingest(
-    good: list[UploadFile] = File(...),  # noqa: B008
-    marked: list[UploadFile] = File(...),  # noqa: B008
-    module_context: str = Form(...),  # noqa: B008
+    good: list[UploadFile] = File(...),
+    marked: list[UploadFile] = File(...),
+    module_context: str = Form(...),
 ) -> Response:
     for file in good:
         _validate_docx(file)
@@ -155,7 +157,7 @@ SIM_THRESHOLD = 0.8
 
 @app.post("/check", response_model=CheckResponse)
 async def check(
-    file: UploadFile = File(...),  # noqa: B008
+    file: UploadFile = File(...),
 ) -> CheckResponse:
     _validate_docx(file)
 

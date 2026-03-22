@@ -1,159 +1,87 @@
 {
-  "1478973000": {
-    "doc_id": 1478973000,
-    "filename": "marked_1.docx",
-    "uploaded_at": "2026-03-22T22:22:12.744969",
-    "tags": [
-      {
-        "tag_id": 1478973000,
-        "tag": "tone inappropriate for formal context",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973001,
-        "tag": "demand establish professional voice",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973002,
-        "tag": "writing behaviour informal salutation used",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973003,
-        "tag": "argument underdeveloped lacks depth",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973004,
-        "tag": "demand develop thesis with evidence",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973005,
-        "tag": "writing behaviour assertion presented without support",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973006,
-        "tag": "critical engagement absent surface level",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973007,
-        "tag": "demand analyze text critically and deeply",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 1478973008,
-        "tag": "writing behaviour summary instead of interpretation",
-        "sentence_idx": 0
-      }
-    ]
-  },
-  "404815000": {
-    "doc_id": 404815000,
+  "739560000": {
+    "doc_id": 739560000,
     "filename": "marked_2.docx",
-    "uploaded_at": "2026-03-22T22:22:16.642878",
+    "uploaded_at": "2026-03-22T23:47:56.320739",
     "tags": [
       {
-        "tag_id": 404815000,
-        "tag": "assertion lacks sufficient support",
+        "tag_id": 739560000,
+        "tag": "assertion lacks analytical support",
         "sentence_idx": 0
       },
       {
-        "tag_id": 404815001,
-        "tag": "interpretative claims require deeper engagement",
+        "tag_id": 739560001,
+        "tag": "claim requires deeper engagement with text",
         "sentence_idx": 0
       },
       {
-        "tag_id": 404815002,
-        "tag": "analysis absent from key textual elements",
+        "tag_id": 739560002,
+        "tag": "interpretation underdeveloped needs expansion",
         "sentence_idx": 0
       },
       {
-        "tag_id": 404815003,
-        "tag": "demand for critical evaluation present",
+        "tag_id": 739560003,
+        "tag": "technique named effect not explained",
         "sentence_idx": 0
       },
       {
-        "tag_id": 404815004,
-        "tag": "surface reading not interrogated deeply",
+        "tag_id": 739560004,
+        "tag": "atmospheric description needs justification",
         "sentence_idx": 0
       },
       {
-        "tag_id": 404815005,
-        "tag": "technique named without effect explained",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 404815006,
-        "tag": "argument lacks specific reader response",
+        "tag_id": 739560005,
+        "tag": "argument lacks clear interpretive focus",
         "sentence_idx": 1
       },
       {
-        "tag_id": 404815007,
-        "tag": "interpretive claims insufficiently supported",
+        "tag_id": 739560006,
+        "tag": "reader response insufficiently explored and analyzed",
         "sentence_idx": 1
       },
       {
-        "tag_id": 404815008,
-        "tag": "critical engagement with language absent",
+        "tag_id": 739560007,
+        "tag": "specific examples needed to support claims",
         "sentence_idx": 1
       },
       {
-        "tag_id": 404815009,
-        "tag": "thesis statement vague and undefined",
+        "tag_id": 739560008,
+        "tag": "abstract concepts require concrete illustration",
         "sentence_idx": 1
       },
       {
-        "tag_id": 404815010,
-        "tag": "analysis underdeveloped lacks depth",
+        "tag_id": 739560009,
+        "tag": "interpretation remains largely descriptive not analytical",
         "sentence_idx": 1
       },
       {
-        "tag_id": 404815011,
-        "tag": "connection between concepts unclear",
-        "sentence_idx": 1
-      },
-      {
-        "tag_id": 404815012,
-        "tag": "surface reading not interrogated deeply",
-        "sentence_idx": 1
-      },
-      {
-        "tag_id": 404815013,
+        "tag_id": 739560010,
         "tag": "argument underdeveloped lacks specific connection",
         "sentence_idx": 2
       },
       {
-        "tag_id": 404815014,
+        "tag_id": 739560011,
         "tag": "evidence insufficiently linked to broader claims",
         "sentence_idx": 2
       },
       {
-        "tag_id": 404815015,
-        "tag": "theoretical framework not clearly articulated",
+        "tag_id": 739560012,
+        "tag": "implicit meaning not explicitly articulated",
         "sentence_idx": 2
       },
       {
-        "tag_id": 404815016,
+        "tag_id": 739560013,
         "tag": "analysis absent from symbolic representation",
         "sentence_idx": 2
       },
       {
-        "tag_id": 404815017,
-        "tag": "interpretive leap unsupported by text",
+        "tag_id": 739560014,
+        "tag": "demand for deeper interpretive engagement",
         "sentence_idx": 2
       },
       {
-        "tag_id": 404815018,
-        "tag": "demand for deeper engagement with ideas",
-        "sentence_idx": 2
-      },
-      {
-        "tag_id": 404815019,
-        "tag": "writing behaviour assertion without justification",
+        "tag_id": 739560015,
+        "tag": "writing behaviour surfacelevel observation only",
         "sentence_idx": 2
       }
     ]

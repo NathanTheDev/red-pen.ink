@@ -18,7 +18,7 @@ def _truncate(tag: str, max_words: int | None = None) -> str:
     return " ".join(words[:max_words]) if max_words else tag
 
 
-def clean(tags: list[str], max_words: int | None = None) -> list[str]:
+def clean_tags(tags: list[str], max_words: int | None = None) -> list[str]:
     cleaned = [
         _truncate(_remove_punctuation(tag), max_words) for tag in tags if tag.strip()
     ]

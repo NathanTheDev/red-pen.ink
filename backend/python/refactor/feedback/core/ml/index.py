@@ -4,9 +4,8 @@ from pathlib import Path
 
 import faiss
 import numpy as np
-
-from feedback.core.ml.llm import embed
-from feedback.models.records import DocumentRecord
+from refactor.feedback.core.ml.llm import llm
+from refactor.feedback.schemas.records import DocumentRecord
 
 MAX_TAGS_PER_DOCUMENT = 1000
 
@@ -44,9 +43,11 @@ def build_index_from_json(path: Path) -> faiss.IndexIDMap:
             ids.append(t.tag_id)
 
     if not tags:
-        raise ValueError(f"No tags found in {path}")
+        dimension = llm.embedding_dimension
+        index = faiss.IndexFlatL2(dimension)
+        return faiss.IndexIDMap(index)
 
-    embs = embed(tags)
+    embs = llm.embed(tags)
     return _build_id_index(embs, ids)
 
 

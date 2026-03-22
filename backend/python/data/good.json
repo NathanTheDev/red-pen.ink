@@ -1,728 +1,243 @@
 {
-  "686869000": {
-    "doc_id": 686869000,
-    "filename": "template_example.docx",
-    "uploaded_at": "2026-03-22T22:22:11.139021",
+  "914651000": {
+    "doc_id": 914651000,
+    "filename": "marked_1.docx",
+    "uploaded_at": "2026-03-22T23:47:52.817391",
     "tags": [
       {
-        "tag_id": 686869000,
-        "tag": "statement establishes conventional wisdom",
+        "tag_id": 914651000,
+        "tag": "statement of identity presented",
         "sentence_idx": 0
       },
       {
-        "tag_id": 686869001,
-        "tag": "introduces theme of scientific progress",
+        "tag_id": 914651001,
+        "tag": "expresses enthusiasm for opportunity",
         "sentence_idx": 0
       },
       {
-        "tag_id": 686869002,
-        "tag": "highlights liberation from past constraints",
+        "tag_id": 914651002,
+        "tag": "highlights global application of work",
         "sentence_idx": 0
       },
       {
-        "tag_id": 686869003,
-        "tag": "emphasizes potential for transcendence",
+        "tag_id": 914651003,
+        "tag": "emphasizes professional growth potential",
         "sentence_idx": 0
       },
       {
-        "tag_id": 686869004,
-        "tag": "framing suggests optimistic viewpoint",
-        "sentence_idx": 0
-      },
-      {
-        "tag_id": 686869005,
-        "tag": "contrast establishes thematic opposition",
+        "tag_id": 914651004,
+        "tag": "temporal sequence establishes timeframe",
         "sentence_idx": 1
       },
       {
-        "tag_id": 686869006,
-        "tag": "sentence structure builds argument strongly",
+        "tag_id": 914651005,
+        "tag": "role assignment clarifies responsibility",
         "sentence_idx": 1
       },
       {
-        "tag_id": 686869007,
-        "tag": "clause combines cause and effect",
+        "tag_id": 914651006,
+        "tag": "quantified achievement highlights success",
         "sentence_idx": 1
       },
       {
-        "tag_id": 686869008,
-        "tag": "adverb modifies key concept clearly",
+        "tag_id": 914651007,
+        "tag": "ownership asserted over technical areas",
         "sentence_idx": 1
       },
       {
-        "tag_id": 686869009,
-        "tag": "phrase reveals core thematic tension",
+        "tag_id": 914651008,
+        "tag": "collaboration noted with supporting tasks",
         "sentence_idx": 1
       },
       {
-        "tag_id": 686869010,
-        "tag": "sentence establishes thematic concern",
+        "tag_id": 914651009,
+        "tag": "lists components and technologies",
         "sentence_idx": 2
       },
       {
-        "tag_id": 686869011,
-        "tag": "sentence identifies key subject matter",
+        "tag_id": 914651010,
+        "tag": "enumerates tools utilized",
         "sentence_idx": 2
       },
       {
-        "tag_id": 686869012,
-        "tag": "sentence argues impact of control",
+        "tag_id": 914651011,
+        "tag": "shows technical stack employed",
         "sentence_idx": 2
       },
       {
-        "tag_id": 686869013,
-        "tag": "sentence employs causal connection",
-        "sentence_idx": 2
-      },
-      {
-        "tag_id": 686869014,
-        "tag": "sentence uses figurative language",
-        "sentence_idx": 2
-      },
-      {
-        "tag_id": 686869015,
-        "tag": "sentence presents a warning statement",
-        "sentence_idx": 2
-      },
-      {
-        "tag_id": 686869016,
-        "tag": "sentence establishes contextual concerns",
+        "tag_id": 914651012,
+        "tag": "statement asserts experiential learning",
         "sentence_idx": 3
       },
       {
-        "tag_id": 686869017,
-        "tag": "representation creates ominous landscape",
+        "tag_id": 914651013,
+        "tag": "verb phrase indicates accomplishment",
         "sentence_idx": 3
       },
       {
-        "tag_id": 686869018,
-        "tag": "author fabricates dystopian setting",
+        "tag_id": 914651014,
+        "tag": "subject specifies project domain",
         "sentence_idx": 3
       },
       {
-        "tag_id": 686869019,
-        "tag": "opening scene highlights thematic focus",
+        "tag_id": 914651015,
+        "tag": "details list technical skills",
         "sentence_idx": 3
       },
       {
-        "tag_id": 686869020,
-        "tag": "metaphor establishes thematic connection",
+        "tag_id": 914651016,
+        "tag": "experience presented as gained",
+        "sentence_idx": 3
+      },
+      {
+        "tag_id": 914651017,
+        "tag": "demonstrates technical expertise presented",
         "sentence_idx": 4
       },
       {
-        "tag_id": 686869021,
-        "tag": "imagery evokes unsettling atmosphere",
+        "tag_id": 914651018,
+        "tag": "details specific technical components listed",
         "sentence_idx": 4
       },
       {
-        "tag_id": 686869022,
-        "tag": "description builds setting details",
+        "tag_id": 914651019,
+        "tag": "highlights requirements for system design",
         "sentence_idx": 4
       },
       {
-        "tag_id": 686869023,
-        "tag": "sentence structure reveals control",
+        "tag_id": 914651020,
+        "tag": "shows consideration of key attributes",
         "sentence_idx": 4
       },
       {
-        "tag_id": 686869024,
-        "tag": "motif of control is presented",
-        "sentence_idx": 4
-      },
-      {
-        "tag_id": 686869025,
-        "tag": "symbolism reinforces dystopian ideas",
-        "sentence_idx": 4
-      },
-      {
-        "tag_id": 686869026,
-        "tag": "shifts focus to a specific instance",
+        "tag_id": 914651021,
+        "tag": "demonstrates increased knowledge acquisition",
         "sentence_idx": 5
       },
       {
-        "tag_id": 686869027,
-        "tag": "imitation establishes a thematic connection",
+        "tag_id": 914651022,
+        "tag": "highlights key concepts learned",
         "sentence_idx": 5
       },
       {
-        "tag_id": 686869028,
-        "tag": "recreation highlights a controlling process",
+        "tag_id": 914651023,
+        "tag": "relates new knowledge to existing",
         "sentence_idx": 5
       },
       {
-        "tag_id": 686869029,
-        "tag": "contextual shift is reinforced by imagery",
+        "tag_id": 914651024,
+        "tag": "shows application of learned skills",
         "sentence_idx": 5
       },
       {
-        "tag_id": 686869030,
-        "tag": "shifts focus to technological influence",
+        "tag_id": 914651025,
+        "tag": "emphasizes practical considerations",
+        "sentence_idx": 5
+      },
+      {
+        "tag_id": 914651026,
+        "tag": "connects theory to practice effectively",
+        "sentence_idx": 5
+      },
+      {
+        "tag_id": 914651027,
+        "tag": "subject establishes desire for growth",
         "sentence_idx": 6
       },
       {
-        "tag_id": 686869031,
-        "tag": "introduces thematic connection to mechanisation",
+        "tag_id": 914651028,
+        "tag": "personal experience frames aspiration",
         "sentence_idx": 6
       },
       {
-        "tag_id": 686869032,
-        "tag": "juxtaposes imagery for unsettling effect",
+        "tag_id": 914651029,
+        "tag": "verb contribute highlights intention",
         "sentence_idx": 6
       },
       {
-        "tag_id": 686869033,
-        "tag": "uses jargon to establish scientific tone",
+        "tag_id": 914651030,
+        "tag": "adjective meaningfully specifies goal",
         "sentence_idx": 6
       },
       {
-        "tag_id": 686869034,
-        "tag": "develops metaphor of reproductive control",
+        "tag_id": 914651031,
+        "tag": "clause continue to develop shows progression",
         "sentence_idx": 6
       },
       {
-        "tag_id": 686869035,
-        "tag": "presents a dark predictive vision",
-        "sentence_idx": 6
-      },
-      {
-        "tag_id": 686869036,
-        "tag": "demonstrates cause and effect relationship",
+        "tag_id": 914651032,
+        "tag": "statement of values presented",
         "sentence_idx": 7
       },
       {
-        "tag_id": 686869037,
-        "tag": "illustrates process impacting larger system",
+        "tag_id": 914651033,
+        "tag": "personal qualities emphasized explicitly",
         "sentence_idx": 7
       },
       {
-        "tag_id": 686869038,
-        "tag": "shows observation of altered state",
+        "tag_id": 914651034,
+        "tag": "opportunity offered to team",
         "sentence_idx": 7
       },
       {
-        "tag_id": 686869039,
-        "tag": "highlights manipulation of fundamental order",
+        "tag_id": 914651035,
+        "tag": "mindset linked to desired outcome",
         "sentence_idx": 7
       },
       {
-        "tag_id": 686869040,
-        "tag": "complex sentence structure establishes tone",
+        "tag_id": 914651036,
+        "tag": "expresses gratitude for evaluation",
         "sentence_idx": 8
       },
       {
-        "tag_id": 686869041,
-        "tag": "personification intensifies emotional impact",
+        "tag_id": 914651037,
+        "tag": "acknowledges submission of request",
         "sentence_idx": 8
       },
       {
-        "tag_id": 686869042,
-        "tag": "onomatopoeia creates vivid sensory detail",
+        "tag_id": 914651038,
+        "tag": "offers polite recognition offered",
         "sentence_idx": 8
       },
       {
-        "tag_id": 686869043,
-        "tag": "juxtaposition highlights moral conflict",
-        "sentence_idx": 8
-      },
-      {
-        "tag_id": 686869044,
-        "tag": "descriptive language builds atmosphere",
-        "sentence_idx": 8
-      },
-      {
-        "tag_id": 686869045,
-        "tag": "sentence explores thematic implications",
-        "sentence_idx": 8
-      },
-      {
-        "tag_id": 686869046,
-        "tag": "sentence establishes a causal link",
+        "tag_id": 914651039,
+        "tag": "statement expresses desire for discussion",
         "sentence_idx": 9
       },
       {
-        "tag_id": 686869047,
-        "tag": "subject introduces a complex question",
+        "tag_id": 914651040,
+        "tag": "connection proposed between personal traits",
         "sentence_idx": 9
       },
       {
-        "tag_id": 686869048,
-        "tag": "authors intention is explicitly stated",
+        "tag_id": 914651041,
+        "tag": "alignment suggested with organizational aims",
         "sentence_idx": 9
       },
       {
-        "tag_id": 686869049,
-        "tag": "sentence explores thematic implications",
+        "tag_id": 914651042,
+        "tag": "background and enthusiasm highlighted",
         "sentence_idx": 9
       },
       {
-        "tag_id": 686869050,
-        "tag": "sentence utilizes rhetorical questioning",
+        "tag_id": 914651043,
+        "tag": "reiteration of shared values present",
         "sentence_idx": 9
       },
       {
-        "tag_id": 686869051,
-        "tag": "sentence connects landscape to human condition",
-        "sentence_idx": 9
-      },
-      {
-        "tag_id": 686869052,
-        "tag": "assertion establishes central topic",
+        "tag_id": 914651044,
+        "tag": "greeting establishes sender identity",
         "sentence_idx": 10
       },
       {
-        "tag_id": 686869053,
-        "tag": "paragraph identified as key element",
+        "tag_id": 914651045,
+        "tag": "formal closing utilized",
         "sentence_idx": 10
       },
       {
-        "tag_id": 686869054,
-        "tag": "contextualizes within broader discussion",
+        "tag_id": 914651046,
+        "tag": "name appended as identifier",
         "sentence_idx": 10
-      },
-      {
-        "tag_id": 686869055,
-        "tag": "sentence establishes thematic connection",
-        "sentence_idx": 11
-      },
-      {
-        "tag_id": 686869056,
-        "tag": "echoes prior concerns presented",
-        "sentence_idx": 11
-      },
-      {
-        "tag_id": 686869057,
-        "tag": "identifies influence of authors ideas",
-        "sentence_idx": 11
-      },
-      {
-        "tag_id": 686869058,
-        "tag": "examines impact of sciencetechnology",
-        "sentence_idx": 11
-      },
-      {
-        "tag_id": 686869059,
-        "tag": "focuses on collective identity formation",
-        "sentence_idx": 11
-      },
-      {
-        "tag_id": 686869060,
-        "tag": "sentence establishes thematic conflict",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869061,
-        "tag": "irony highlights societal control",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869062,
-        "tag": "sentence presents cause and effect",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869063,
-        "tag": "sentence details cultural influence",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869064,
-        "tag": "slogans function as persuasive tools",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869065,
-        "tag": "sentence constructs a cyclical pattern",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869066,
-        "tag": "sentence reinforces predetermined destinies",
-        "sentence_idx": 12
-      },
-      {
-        "tag_id": 686869067,
-        "tag": "assertion establishes societal condition",
-        "sentence_idx": 13
-      },
-      {
-        "tag_id": 686869068,
-        "tag": "homogeneity presented as outcome",
-        "sentence_idx": 13
-      },
-      {
-        "tag_id": 686869069,
-        "tag": "spiritual state described negatively",
-        "sentence_idx": 13
-      },
-      {
-        "tag_id": 686869070,
-        "tag": "lack of questioning highlighted",
-        "sentence_idx": 13
-      },
-      {
-        "tag_id": 686869071,
-        "tag": "identitys absence emphasized strongly",
-        "sentence_idx": 13
-      },
-      {
-        "tag_id": 686869072,
-        "tag": "simile establishes comparison",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869073,
-        "tag": "zoomorphic imagery evokes imagery",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869074,
-        "tag": "juxtaposition reveals societal structure",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869075,
-        "tag": "imagery highlights loss of freedom",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869076,
-        "tag": "cyclical routine suggests control",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869077,
-        "tag": "descriptive language creates atmosphere",
-        "sentence_idx": 14
-      },
-      {
-        "tag_id": 686869078,
-        "tag": "cause and effect established",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869079,
-        "tag": "removal leads to consequence",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869080,
-        "tag": "characters struggle presented",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869081,
-        "tag": "parameters defined then broken",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869082,
-        "tag": "contrast highlights vulnerability",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869083,
-        "tag": "narrative focuses on outcome",
-        "sentence_idx": 15
-      },
-      {
-        "tag_id": 686869084,
-        "tag": "shifts focus to internal reaction",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869085,
-        "tag": "demonstrates emotional response escalating",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869086,
-        "tag": "establishes disorientation within setting",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869087,
-        "tag": "highlights limitations of prior experience",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869088,
-        "tag": "reveals conflict between self and world",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869089,
-        "tag": "challenges established social framework",
-        "sentence_idx": 16
-      },
-      {
-        "tag_id": 686869090,
-        "tag": "demonstrates thematic connection",
-        "sentence_idx": 17
-      },
-      {
-        "tag_id": 686869091,
-        "tag": "highlights contrasting perspectives presented",
-        "sentence_idx": 17
-      },
-      {
-        "tag_id": 686869092,
-        "tag": "suggests underlying philosophical debate",
-        "sentence_idx": 17
-      },
-      {
-        "tag_id": 686869093,
-        "tag": "examines relationship between science humanity",
-        "sentence_idx": 17
-      },
-      {
-        "tag_id": 686869094,
-        "tag": "assertion presented as final conclusion",
-        "sentence_idx": 18
-      },
-      {
-        "tag_id": 686869095,
-        "tag": "problematic representations identified and framed",
-        "sentence_idx": 18
-      },
-      {
-        "tag_id": 686869096,
-        "tag": "solutions proposed as external to system",
-        "sentence_idx": 18
-      },
-      {
-        "tag_id": 686869097,
-        "tag": "rigid parameters contrasted with solutions",
-        "sentence_idx": 18
-      },
-      {
-        "tag_id": 686869098,
-        "tag": "limits established to highlight broader scope",
-        "sentence_idx": 18
-      },
-      {
-        "tag_id": 686869099,
-        "tag": "complex sentence structure establishes argument",
-        "sentence_idx": 19
-      },
-      {
-        "tag_id": 686869100,
-        "tag": "causal relationship links values to emergence",
-        "sentence_idx": 19
-      },
-      {
-        "tag_id": 686869101,
-        "tag": "juxtaposition contrasts science with experience",
-        "sentence_idx": 19
-      },
-      {
-        "tag_id": 686869102,
-        "tag": "iteration reinforces thematic concern",
-        "sentence_idx": 19
-      },
-      {
-        "tag_id": 686869103,
-        "tag": "logical consequence builds arguments weight",
-        "sentence_idx": 19
-      },
-      {
-        "tag_id": 686869104,
-        "tag": "assertion establishes central argument",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869105,
-        "tag": "symbolic action drives narrative",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869106,
-        "tag": "repetition emphasizes key concept",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869107,
-        "tag": "counterargument directly opposes existing state",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869108,
-        "tag": "values promoted reveal ideological stance",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869109,
-        "tag": "claim frames new perspective",
-        "sentence_idx": 20
-      },
-      {
-        "tag_id": 686869110,
-        "tag": "dialectic establishes central argument",
-        "sentence_idx": 21
-      },
-      {
-        "tag_id": 686869111,
-        "tag": "debate introduces opposing viewpoints",
-        "sentence_idx": 21
-      },
-      {
-        "tag_id": 686869112,
-        "tag": "culmination reveals thematic tension",
-        "sentence_idx": 21
-      },
-      {
-        "tag_id": 686869113,
-        "tag": "artificiality challenges conventional notions",
-        "sentence_idx": 21
-      },
-      {
-        "tag_id": 686869114,
-        "tag": "worldbuilding supports philosophical inquiry",
-        "sentence_idx": 21
-      },
-      {
-        "tag_id": 686869115,
-        "tag": "anaphoric claim establishes central concept",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869116,
-        "tag": "complex idea presented through repetition",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869117,
-        "tag": "belief system articulated through phrasing",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869118,
-        "tag": "experience framed as multifaceted process",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869119,
-        "tag": "juxtaposition of pain and joy",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869120,
-        "tag": "predicate reveals underlying philosophical stance",
-        "sentence_idx": 22
-      },
-      {
-        "tag_id": 686869121,
-        "tag": "sentence presents a dramatic event",
-        "sentence_idx": 23
-      },
-      {
-        "tag_id": 686869122,
-        "tag": "narrative shift highlights a consequence",
-        "sentence_idx": 23
-      },
-      {
-        "tag_id": 686869123,
-        "tag": "word choice emphasizes negative impact",
-        "sentence_idx": 23
-      },
-      {
-        "tag_id": 686869124,
-        "tag": "setting contrasts with personal action",
-        "sentence_idx": 23
-      },
-      {
-        "tag_id": 686869125,
-        "tag": "denouement reveals a thematic tension",
-        "sentence_idx": 23
-      },
-      {
-        "tag_id": 686869126,
-        "tag": "simile establishes symbolic comparison",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869127,
-        "tag": "imagery evokes unsettling atmosphere",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869128,
-        "tag": "rotation emphasizes cyclical pattern",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869129,
-        "tag": "analogy connects past and present",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869130,
-        "tag": "values contrasted with modern existence",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869131,
-        "tag": "suggests thematic warning conveyed",
-        "sentence_idx": 24
-      },
-      {
-        "tag_id": 686869132,
-        "tag": "assertion establishes thematic conflict",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869133,
-        "tag": "premise argues against optimistic science",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869134,
-        "tag": "contrast highlights opposing desires",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869135,
-        "tag": "sentence frames a core tension",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869136,
-        "tag": "logic connects past and present",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869137,
-        "tag": "focus reveals dystopian perspective",
-        "sentence_idx": 25
-      },
-      {
-        "tag_id": 686869138,
-        "tag": "sentence establishes thematic concern",
-        "sentence_idx": 26
-      },
-      {
-        "tag_id": 686869139,
-        "tag": "sentence identifies key subject matter",
-        "sentence_idx": 26
-      },
-      {
-        "tag_id": 686869140,
-        "tag": "sentence argues for opposing forces",
-        "sentence_idx": 26
-      },
-      {
-        "tag_id": 686869141,
-        "tag": "sentence presents a central conflict",
-        "sentence_idx": 26
-      },
-      {
-        "tag_id": 686869142,
-        "tag": "sentence employs figurative language",
-        "sentence_idx": 26
-      },
-      {
-        "tag_id": 686869143,
-        "tag": "sentence suggests inherent incompatibility",
-        "sentence_idx": 26
       }
     ]
   }

@@ -4,7 +4,7 @@ import zipfile
 
 from docx import Document
 from fastapi import UploadFile
-from lxml import etree
+from lxml import etree  # type: ignore
 
 __all__ = ["read_docx", "extract_docx_comments"]
 

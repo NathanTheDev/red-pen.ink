@@ -1,3 +1,7 @@
+# Package Specific
+data/*
+!data/.gitkeep
+
 # Byte-compiled / Optimized / DLL files
 __pycache__/
 *.py[codz]
