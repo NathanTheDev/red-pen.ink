@@ -60,6 +60,7 @@ function HomeComponent() {
         <Upload
           label="Upload as many examples of essays you would give full marks to as you can (the more you upload the better the feedback)"
           content="Upload several .docx file..."
+          multiple={true}
           files={goodFiles}
           onFilesChange={setGoodFiles}
         />
