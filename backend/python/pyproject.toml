@@ -17,17 +17,16 @@ dependencies = [
   "uvicorn[standard]==0.37.0",
   "python-multipart==0.0.22",
   "pydantic==2.12.5",
-
   # ml
   "faiss-cpu==1.13.2",
   "ollama==0.6.1",
-
   # nlp
   "spacy==3.8.11",
   "en-core-web-lg",
-
   # dev
   "ruff==0.15.7",
+  "supertokens-python>=0.31.2",
+  "python-dotenv>=1.2.2",
 ]
 
 [tool.uv.sources]

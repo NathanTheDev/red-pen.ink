@@ -21,8 +21,10 @@
   "dependencies": {
     "@tanstack/react-router": "^1.117.1",
     "@tanstack/router-devtools": "^1.117.1",
+    "@tanstack/zod-adapter": "^1.166.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "supertokens-web-js": "^0.16.0"
+    "supertokens-web-js": "^0.16.0",
+    "zod": "^4.3.6"
   }
 }

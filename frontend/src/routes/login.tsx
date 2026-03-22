@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { signIn, signUp } from "@/lib/auth";
+import { Title } from "@/components/ui/Title";
 
 export const Route = createFileRoute("/login")({
   component: LoginComponent,
@@ -39,8 +40,8 @@ function LoginComponent() {
 
   return (
     <div className="min-h-screen bg-[#1C1714] flex flex-col items-center justify-center p-8">
-      <h1 className="text-4xl font-bold text-red-500 mb-8">red.ink</h1>
-      <div className="w-full max-w-sm bg-[#252019] rounded-3xl border border-[#2E2820] px-8 py-6 flex flex-col gap-4">
+      <Title />
+      <div className="w-full max-w-sm bg-[#252019] rounded-3xl border border-[#2E2820] px-8 py-6 flex flex-col gap-4 mt-4">
         <input
           type="email"
           placeholder="Email"

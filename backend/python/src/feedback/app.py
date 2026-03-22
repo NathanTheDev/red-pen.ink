@@ -1,11 +1,36 @@
 import logging
 from contextlib import asynccontextmanager
-
 from fastapi import FastAPI, File, Form, HTTPException, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
-
 from feedback.models.response import Annotation
+from supertokens_python import init, InputAppInfo, SupertokensConfig, get_all_cors_headers
+from supertokens_python.recipe import emailpassword, session
+from supertokens_python.framework.fastapi import get_middleware
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+init(
+    app_info=InputAppInfo(
+        app_name="red.ink",
+        api_domain="http://localhost:8080",
+        website_domain="http://localhost:3001",
+        api_base_path="/auth",
+        website_base_path="/login",
+    ),
+    supertokens_config=SupertokensConfig(
+       connection_uri=os.environ["SUPERTOKENS_CONNECTION_URI"],
+        api_key=os.environ["SUPERTOKENS_API_KEY"], 
+    ),
+    framework="fastapi",
+    recipe_list=[
+        emailpassword.init(),
+        session.init(),
+    ],
+    mode="asgi",
+)
 
 LOGGER = logging.getLogger("uvicorn")
 
@@ -30,12 +55,14 @@ app = FastAPI(
     lifespan=_lifespan,
 )
 
-app.add_middleware(TrustedHostMiddleware)
+app.add_middleware(get_middleware())
+# app.add_middleware(TrustedHostMiddleware)
 app.add_middleware(
     CORSMiddleware,
+    allow_origins=["http://localhost:3001"],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type"] + get_all_cors_headers(),
 )
 
 
