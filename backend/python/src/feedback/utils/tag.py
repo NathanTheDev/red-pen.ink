@@ -1,13 +1,13 @@
 from collections.abc import Callable
 
-from refactor.feedback.core.ml.index import gen_doc_id, gen_tag_id
-from refactor.feedback.core.ml.nlp import to_sentences
-from refactor.feedback.core.query.queries import (
+from feedback.core.ml.index import gen_doc_id, gen_tag_id
+from feedback.core.ml.nlp import to_sentences
+from feedback.core.query.queries import (
     extract_analysis_tags,
     extract_feedback_tags,
     extract_neutral_tags,
 )
-from refactor.feedback.schemas.records import DocumentRecord, TagRecord
+from feedback.schemas.records import DocumentRecord, TagRecord
 
 
 def _tag_texts[T](

@@ -4,11 +4,9 @@ import spacy
 
 NLP = spacy.load("en_core_web_lg")
 
-_PUNCT = re.compile(r"[^\w\s]")
-
 
 def _remove_punctuation(tag: str) -> str:
-    return _PUNCT.sub("", tag).strip()
+    return re.compile(r"[^\w\s]").sub("", tag).strip()
 
 
 def _remove_proper_nouns(tags: list[str]) -> list[str]:

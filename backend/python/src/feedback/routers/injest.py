@@ -1,9 +1,9 @@
 # ruff: noqa: B008
 
 from fastapi import APIRouter, File, Form, Response, UploadFile
-from refactor.feedback.config import reload_feedback, reload_neutral
-from refactor.feedback.utils.parse import extract_docx_comments, read_docx
-from refactor.feedback.utils.tag import tag_feedback, tag_neutral
+from feedback.config import reload_feedback, reload_neutral
+from feedback.utils.parse import extract_docx_comments, read_docx
+from feedback.utils.tag import tag_feedback, tag_neutral
 
 router = APIRouter()
 
