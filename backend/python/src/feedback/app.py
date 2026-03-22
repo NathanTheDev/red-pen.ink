@@ -9,6 +9,7 @@ from supertokens_python.recipe import emailpassword, session
 from supertokens_python.framework.fastapi import get_middleware
 import os
 from dotenv import load_dotenv
+from feedback.utils import read_docx, extract_docx_comments
 
 load_dotenv()
 
@@ -80,6 +81,19 @@ async def ingest(
 ) -> Response:
     for file in good + marked:
         _validate_docx(file)
+    
+    good_content = []
+    for file in good:
+        good_content.append(await read_docx(file))
+    # put the good where Andrew wants it
+    print(good_content)
+    
+    marked_content = []
+    for file in marked:
+        marked_content.append(await extract_docx_comments(file))
+    # put the marked where andrew wants it
+    print(marked_content)
+        
     return Response(status_code=200)
 
 
