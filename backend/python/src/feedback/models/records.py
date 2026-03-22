@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field
 class TagRecord(BaseModel):
     tag_id: int
     tag: str
+    sentence_idx: int
 
 
 class DocumentRecord(BaseModel):
