@@ -121,19 +121,18 @@ function FeedbackComponent() {
                           : seg.annotationIndex,
                       )
                     }
-                    className="cursor-pointer rounded px-0.5 transition-colors"
+                    className="cursor-pointer transition-colors"
                     style={{
-                      background: "transparent",
+                      background:
+                        activeIndex === seg.annotationIndex
+                          ? "#7f1d1d"
+                          : "#fecaca",
                       color:
                         activeIndex === seg.annotationIndex
-                          ? "#f87171"
-                          : "#ef4444",
-                      textDecoration: "underline",
-                      textDecorationColor:
-                        activeIndex === seg.annotationIndex
-                          ? "#f87171"
+                          ? "#fecaca"
                           : "#991b1b",
-                      textUnderlineOffset: "3px",
+                      borderRadius: "3px",
+                      padding: "0 2px",
                     }}
                   >
                     {seg.text}
