@@ -72,7 +72,7 @@ function LoginComponent() {
         {error && <p className="text-red-400 text-sm text-center">{error}</p>}
         <button
           onClick={handleSubmit}
-          className="w-full py-3 rounded-full bg-red-500 text-white font-bold hover:bg-red-600 transition-colors"
+          className="w-full py-3 rounded-full bg-red-500 text-white font-bold hover:bg-red-600 transition-colors cursor-pointer"
         >
           {isSignUp ? "Create account" : "Sign in"}
         </button>
@@ -80,7 +80,7 @@ function LoginComponent() {
           {isSignUp ? "Already have an account?" : "Don't have an account?"}{" "}
           <button
             onClick={handleToggle}
-            className="text-[#A89880] hover:text-[#D4C4A8] transition-colors"
+            className="text-[#A89880] hover:text-[#D4C4A8] transition-colors cursor-pointer"
           >
             {isSignUp ? "Sign in" : "Sign up"}
           </button>
