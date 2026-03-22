@@ -60,6 +60,10 @@ mark_index: faiss.IndexIDMap | None = None
 
 def reload_indexes() -> None:
     global good_index, mark_index
+
+    if not GOOD_PATH.exists() or not MASKED_PATH.exists():
+        return
+
     good_index, mark_index = (
         build_index_from_json(GOOD_PATH),
         build_index_from_json(MASKED_PATH),
@@ -129,7 +133,9 @@ async def ingest(
     marked_records = []
     for file in marked:
         feedback_pairs = await extract_docx_comments(file)
-        marked_records.append(tag_marked(file.filename or "", feedback_pairs, module_context))
+        marked_records.append(
+            tag_marked(file.filename or "", feedback_pairs, module_context)
+        )
 
     save_tags(GOOD_PATH, good_records)
     save_tags(MASKED_PATH, marked_records)
@@ -144,7 +150,7 @@ class CheckResponse(BaseModel):
     annotations: list[Annotation]
 
 
-SIM_THRESHOLD = 0.70
+SIM_THRESHOLD = 0.8
 
 
 @app.post("/check", response_model=CheckResponse)
@@ -162,15 +168,19 @@ async def check(
     mark_records = load_tags(MASKED_PATH)
     sentences = to_sentences(raw_text)
 
-    results = []
+    seen: dict[str, str] = {}
     for quality_tag, (score_row, id_row) in zip(
         record.tags, zip(scores, ids, strict=False), strict=False
     ):
         if float(score_row[0]) < SIM_THRESHOLD:
             continue
+        sentence = sentences[quality_tag.sentence_idx]
+        if sentence in seen:
+            continue
         doc_id, tag_idx = unpack_tag_id(int(id_row[0]))
-        matched_tag = mark_records[doc_id].tags[tag_idx].tag
-        results.append((sentences[quality_tag.sentence_idx], matched_tag))
+        seen[sentence] = mark_records[doc_id].tags[tag_idx].tag
+
+    results = list(seen.items())
 
     feedback_list = generate_bulk_feedback(results, raw_text)
     if feedback_list is None:

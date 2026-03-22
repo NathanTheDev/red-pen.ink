@@ -59,6 +59,7 @@ _SIMILAR_FEEDBACK_PROMPT = (
     "A teacher left a comment on a student essay sentence similar to yours.\n\n"
     "Based on that sentence and comment pair, write a short, direct comment for the new sentence.\n"
     "Write as a teacher addressing the student directly.\n"
+    "You have the full passage for context — do not repeat feedback already implied by surrounding sentences.\n"
     "Do not reference the original sentence or comment explicitly.\n"
     "2-3 sentences maximum.\n"
 )
@@ -126,10 +127,11 @@ def extract_feedback_tags(sentence: str, comment: str, context: str) -> list[str
 
 
 def generate_similar_feedback(
-    sentence: str, similar_sentence: str, similar_comment: str
+    sentence: str, similar_sentence: str, similar_comment: str, full_text: str
 ) -> str | None:
     prompt = _build_prompt(
         _SIMILAR_FEEDBACK_PROMPT,
+        f'Full passage:\n"{full_text}"',
         f'Similar sentence: "{similar_sentence}"',
         f'Teacher comment: "{similar_comment}"',
         f'Student sentence: "{sentence}"',
@@ -141,7 +143,8 @@ def generate_bulk_feedback(
     pairs: list[tuple[str, str]], full_text: str
 ) -> list[str] | None:
     numbered = "\n".join(
-        f'{i + 1}. Sentence: "{s}"\n   Comment: "{c}"' for i, (s, c) in enumerate(pairs)
+        f'{i + 1}. Sentence: "{s}"\n   Similar comment: "{c}"'
+        for i, (s, c) in enumerate(pairs)
     )
     prompt = _build_prompt(
         _BULK_FEEDBACK_PROMPT,
@@ -154,6 +157,8 @@ def generate_bulk_feedback(
     clean = _JSON_FENCE.sub("", answer).strip()
     try:
         result = json.loads(clean)
+        if len(result) != len(pairs):
+            return None
         return [r for r in result if isinstance(r, str)]
     except json.JSONDecodeError:
         return None

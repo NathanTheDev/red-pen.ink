@@ -1,53 +1,160 @@
 {
-  "1261342000": {
-    "doc_id": 1261342000,
-    "filename": "Rando.docx",
-    "uploaded_at": "2026-03-22T19:27:48.462107",
+  "1478973000": {
+    "doc_id": 1478973000,
+    "filename": "marked_1.docx",
+    "uploaded_at": "2026-03-22T22:22:12.744969",
     "tags": [
       {
-        "tag_id": 1261342000,
-        "tag": "tone inappropriate for professional context",
+        "tag_id": 1478973000,
+        "tag": "tone inappropriate for formal context",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342001,
-        "tag": "demand establish respectful formality",
+        "tag_id": 1478973001,
+        "tag": "demand establish professional voice",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342002,
-        "tag": "behaviour informal address used",
+        "tag_id": 1478973002,
+        "tag": "writing behaviour informal salutation used",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342003,
-        "tag": "argument lacks clear direction",
+        "tag_id": 1478973003,
+        "tag": "argument underdeveloped lacks depth",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342004,
-        "tag": "demand thesis statement clearly articulated",
+        "tag_id": 1478973004,
+        "tag": "demand develop thesis with evidence",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342005,
-        "tag": "behaviour lacks a central controlling idea",
+        "tag_id": 1478973005,
+        "tag": "writing behaviour assertion presented without support",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342006,
-        "tag": "critical engagement with source material missing",
+        "tag_id": 1478973006,
+        "tag": "critical engagement absent surface level",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342007,
-        "tag": "demand deeper analysis of evidence",
+        "tag_id": 1478973007,
+        "tag": "demand analyze text critically and deeply",
         "sentence_idx": 0
       },
       {
-        "tag_id": 1261342008,
-        "tag": "behaviour surfacelevel summary presented as argument",
+        "tag_id": 1478973008,
+        "tag": "writing behaviour summary instead of interpretation",
         "sentence_idx": 0
+      }
+    ]
+  },
+  "404815000": {
+    "doc_id": 404815000,
+    "filename": "marked_2.docx",
+    "uploaded_at": "2026-03-22T22:22:16.642878",
+    "tags": [
+      {
+        "tag_id": 404815000,
+        "tag": "assertion lacks sufficient support",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815001,
+        "tag": "interpretative claims require deeper engagement",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815002,
+        "tag": "analysis absent from key textual elements",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815003,
+        "tag": "demand for critical evaluation present",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815004,
+        "tag": "surface reading not interrogated deeply",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815005,
+        "tag": "technique named without effect explained",
+        "sentence_idx": 0
+      },
+      {
+        "tag_id": 404815006,
+        "tag": "argument lacks specific reader response",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815007,
+        "tag": "interpretive claims insufficiently supported",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815008,
+        "tag": "critical engagement with language absent",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815009,
+        "tag": "thesis statement vague and undefined",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815010,
+        "tag": "analysis underdeveloped lacks depth",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815011,
+        "tag": "connection between concepts unclear",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815012,
+        "tag": "surface reading not interrogated deeply",
+        "sentence_idx": 1
+      },
+      {
+        "tag_id": 404815013,
+        "tag": "argument underdeveloped lacks specific connection",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815014,
+        "tag": "evidence insufficiently linked to broader claims",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815015,
+        "tag": "theoretical framework not clearly articulated",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815016,
+        "tag": "analysis absent from symbolic representation",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815017,
+        "tag": "interpretive leap unsupported by text",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815018,
+        "tag": "demand for deeper engagement with ideas",
+        "sentence_idx": 2
+      },
+      {
+        "tag_id": 404815019,
+        "tag": "writing behaviour assertion without justification",
+        "sentence_idx": 2
       }
     ]
   }
