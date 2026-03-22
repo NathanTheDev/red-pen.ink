@@ -15,14 +15,14 @@ export function Upload({
   return (
     <div className="flex flex-col items-center gap-2 pt-8">
       <div className="relative w-full max-w-xl">
-        <p className="text-sm font-bold text-[#5C3D1E] mb-2">{label}</p>
-        <label className="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-full border border-neutral-200 bg-white shadow-sm text-sm text-neutral-400 cursor-pointer hover:bg-neutral-50 transition-colors">
+        <p className="text-sm font-bold text-[#A89880] mb-2">{label}</p>
+        <label className="flex items-center justify-center gap-3 w-full py-3 px-6 rounded-full border border-[#4A3E30] bg-[#3D3328] shadow-sm text-sm text-[#A89880] cursor-pointer hover:bg-[#45392D] transition-colors">
           <span>
             {fileNames.length === 0
               ? content
               : fileNames.length === 1
-              ? fileNames[0]
-              : `${fileNames.length} files selected`}
+                ? fileNames[0]
+                : `${fileNames.length} files selected`}
           </span>
           <input
             type="file"

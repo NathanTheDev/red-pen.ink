@@ -10,9 +10,9 @@ export const Route = createFileRoute("/")({
 
 function HomeComponent() {
   return (
-    <div className="min-h-screen flex flex-col items-center p-8">
+    <div className="min-h-screen bg-[#1C1714] flex flex-col items-center p-8">
       <Title />
-      <div className="w-full max-w-xl bg-[#FAF0D7] rounded-3xl shadow-sm border border-neutral-200 px-8 py-6 mt-4">
+      <div className="w-full max-w-xl bg-[#252019] rounded-3xl shadow-sm border border-[#2E2820] px-8 py-6 mt-4">
         <Upload
           label="Upload an example of an essay you would give 100%"
           content="Upload a .docx file..."
