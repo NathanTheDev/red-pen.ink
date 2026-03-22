@@ -1,8 +1,9 @@
 import io
 import zipfile
-from lxml import etree
+
 from docx import Document
 from fastapi import UploadFile
+from lxml import etree
 
 __all__ = ["read_docx", "extract_docx_comments"]
 
@@ -13,13 +14,13 @@ NS = {"w": W}
 
 async def extract_docx_comments(file: UploadFile) -> list[tuple[str, str]]:
     docx_bytes = await file.read()
-    
+
     with zipfile.ZipFile(io.BytesIO(docx_bytes)) as z:
         doc_xml = etree.fromstring(z.read("word/document.xml"))
-        
+
         if "word/comments.xml" not in z.namelist():
             return []
-        
+
         comments_xml = etree.fromstring(z.read("word/comments.xml"))
 
     comment_map: dict[str, str] = {}
@@ -56,6 +57,7 @@ async def extract_docx_comments(file: UploadFile) -> list[tuple[str, str]]:
                         pairs.append((highlighted_text, comment_text))
 
     return pairs
+
 
 async def read_docx(file: UploadFile) -> str:
     contents = await file.read()

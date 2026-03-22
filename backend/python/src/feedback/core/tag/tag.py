@@ -55,6 +55,25 @@ _FEEDBACK_PROMPT = (
     "Respond with a JSON array of strings and nothing else\n"
 )
 
+_SIMILAR_FEEDBACK_PROMPT = (
+    "A teacher left a comment on a student essay sentence similar to yours.\n\n"
+    "Based on that sentence and comment pair, write a short, direct comment for the new sentence.\n"
+    "Write as a teacher addressing the student directly.\n"
+    "Do not reference the original sentence or comment explicitly.\n"
+    "2-3 sentences maximum.\n"
+)
+
+_BULK_FEEDBACK_PROMPT = (
+    "A teacher has left comments on student essay sentences similar to those in the passage below.\n\n"
+    "For each (sentence, similar comment) pair, write a short direct comment for that sentence.\n"
+    "Write as a teacher addressing the student directly.\n"
+    "You have the full passage for context, avoid redundant or repeated feedback.\n"
+    "Do not reference the similar sentence or comment explicitly.\n"
+    "2-3 sentences per comment maximum.\n"
+    "Respond with a JSON array of strings, one comment per pair, in the same order.\n"
+    "Respond with a JSON array of strings and nothing else.\n"
+)
+
 
 def _build_prompt(*parts: str) -> str:
     return "\n\n".join(p for p in parts if p)
@@ -104,3 +123,37 @@ def extract_feedback_tags(sentence: str, comment: str, context: str) -> list[str
             f'Context: "{context}"' if context else "",
         ],
     )
+
+
+def generate_similar_feedback(
+    sentence: str, similar_sentence: str, similar_comment: str
+) -> str | None:
+    prompt = _build_prompt(
+        _SIMILAR_FEEDBACK_PROMPT,
+        f'Similar sentence: "{similar_sentence}"',
+        f'Teacher comment: "{similar_comment}"',
+        f'Student sentence: "{sentence}"',
+    )
+    return query(prompt)
+
+
+def generate_bulk_feedback(
+    pairs: list[tuple[str, str]], full_text: str
+) -> list[str] | None:
+    numbered = "\n".join(
+        f'{i + 1}. Sentence: "{s}"\n   Comment: "{c}"' for i, (s, c) in enumerate(pairs)
+    )
+    prompt = _build_prompt(
+        _BULK_FEEDBACK_PROMPT,
+        f'Full passage:\n"{full_text}"',
+        f"Pairs:\n{numbered}",
+    )
+    answer = query(prompt)
+    if answer is None:
+        return None
+    clean = _JSON_FENCE.sub("", answer).strip()
+    try:
+        result = json.loads(clean)
+        return [r for r in result if isinstance(r, str)]
+    except json.JSONDecodeError:
+        return None

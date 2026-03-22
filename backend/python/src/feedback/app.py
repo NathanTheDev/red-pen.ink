@@ -1,16 +1,34 @@
 import logging
+import os
 from contextlib import asynccontextmanager
+
+import faiss
+from dotenv import load_dotenv
 from fastapi import FastAPI, File, Form, HTTPException, Response, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.trustedhost import TrustedHostMiddleware
-from feedback.models.response import Annotation
-from supertokens_python import init, InputAppInfo, SupertokensConfig, get_all_cors_headers
-from supertokens_python.recipe import emailpassword, session
-from supertokens_python.framework.fastapi import get_middleware
-import os
-from dotenv import load_dotenv
-from feedback.util import read_docx, extract_docx_comments
 from pydantic import BaseModel
+from supertokens_python import (
+    InputAppInfo,
+    SupertokensConfig,
+    get_all_cors_headers,
+    init,
+)
+from supertokens_python.framework.fastapi import get_middleware
+from supertokens_python.recipe import emailpassword, session
+
+from feedback.core.ml.index import (
+    build_index_from_json,
+    load_tags,
+    save_tags,
+    unpack_tag_id,
+)
+from feedback.core.ml.llm import embed
+from feedback.core.ml.nlp import to_sentences
+from feedback.core.tag.tag import generate_bulk_feedback
+from feedback.models.response import Annotation
+from feedback.sandbox import GOOD_PATH, MASKED_PATH
+from feedback.util import extract_docx_comments, read_docx
+from feedback.utils.extract import tag_good, tag_marked, tag_quality
 
 load_dotenv()
 
@@ -23,8 +41,8 @@ init(
         website_base_path="/login",
     ),
     supertokens_config=SupertokensConfig(
-       connection_uri=os.environ["SUPERTOKENS_CONNECTION_URI"],
-        api_key=os.environ["SUPERTOKENS_API_KEY"], 
+        connection_uri=os.environ["SUPERTOKENS_CONNECTION_URI"],
+        api_key=os.environ["SUPERTOKENS_API_KEY"],
     ),
     framework="fastapi",
     recipe_list=[
@@ -35,6 +53,23 @@ init(
 )
 
 LOGGER = logging.getLogger("uvicorn")
+
+good_index: faiss.IndexIDMap | None = None
+mark_index: faiss.IndexIDMap | None = None
+
+
+def reload_indexes() -> None:
+    global good_index, mark_index
+    good_index, mark_index = (
+        build_index_from_json(GOOD_PATH),
+        build_index_from_json(MASKED_PATH),
+    )
+
+
+def get_indexes() -> tuple[faiss.IndexIDMap, faiss.IndexIDMap]:
+    if good_index is None or mark_index is None:
+        raise RuntimeError("Indexes not loaded — call /ingest first")
+    return good_index, mark_index
 
 
 def _validate_docx(file: UploadFile) -> None:
@@ -48,6 +83,7 @@ def _validate_docx(file: UploadFile) -> None:
 @asynccontextmanager
 async def _lifespan(_: FastAPI):
     LOGGER.info("Feedback service started. Loading model.")
+    reload_indexes()
     yield
     LOGGER.info("Feedback quality service shutting down.")
 
@@ -80,43 +116,70 @@ async def ingest(
     marked: list[UploadFile] = File(...),  # noqa: B008
     module_context: str = Form(...),  # noqa: B008
 ) -> Response:
-    for file in good + marked:
-        _validate_docx(file)
-    
-    good_content = []
     for file in good:
-        good_content.append(await read_docx(file))
-    # put the good where Andrew wants it
-    print(good_content)
-    
-    marked_content = []
+        _validate_docx(file)
     for file in marked:
-        marked_content.append(await extract_docx_comments(file))
-    # put the marked where andrew wants it
-    print(marked_content)
-        
+        _validate_docx(file)
+
+    good_records = []
+    for file in good:
+        raw_text = await read_docx(file)
+        good_records.append(tag_good(file.filename or "", raw_text, module_context))
+
+    marked_records = []
+    for file in marked:
+        feedback_pairs = await extract_docx_comments(file)
+        marked_records.append(tag_marked(file.filename or "", feedback_pairs, module_context))
+
+    save_tags(GOOD_PATH, good_records)
+    save_tags(MASKED_PATH, marked_records)
+
+    reload_indexes()
+
     return Response(status_code=200)
+
 
 class CheckResponse(BaseModel):
     content: str
     annotations: list[Annotation]
+
+
+SIM_THRESHOLD = 0.70
+
 
 @app.post("/check", response_model=CheckResponse)
 async def check(
     file: UploadFile = File(...),  # noqa: B008
 ) -> CheckResponse:
     _validate_docx(file)
-    content = await read_docx(file)
+
+    raw_text = await read_docx(file)
+    record = tag_quality("", raw_text, context="")
+    tags = [t.tag for t in record.tags]
+    embs = embed(tags)
+
+    scores, ids = mark_index.search(embs, k=1)  # type: ignore
+    mark_records = load_tags(MASKED_PATH)
+    sentences = to_sentences(raw_text)
+
+    results = []
+    for quality_tag, (score_row, id_row) in zip(
+        record.tags, zip(scores, ids, strict=False), strict=False
+    ):
+        if float(score_row[0]) < SIM_THRESHOLD:
+            continue
+        doc_id, tag_idx = unpack_tag_id(int(id_row[0]))
+        matched_tag = mark_records[doc_id].tags[tag_idx].tag
+        results.append((sentences[quality_tag.sentence_idx], matched_tag))
+
+    feedback_list = generate_bulk_feedback(results, raw_text)
+    if feedback_list is None:
+        return CheckResponse(content=raw_text, annotations=[])
+
     return CheckResponse(
-        content=content,
+        content=raw_text,
         annotations=[
-            Annotation(
-                span="Kind regards",
-                comment="Oversimplified. Resolution is more ambiguous than stated.",
-            ),
-            Annotation(
-                span="I am eager to contribute",
-                comment="Bro, you ainted eager, you just begging for a job.",
-            ),
-        ]
+            Annotation(span=sentence, comment=comment)
+            for (sentence, _), comment in zip(results, feedback_list, strict=False)
+        ],
     )
