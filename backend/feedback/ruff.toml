@@ -1,0 +1,33 @@
+line-length = 88
+src = ["src"]
+
+[lint]
+select = [
+    "B",        # flake8-bugbear
+    "SIM",      # flake8-simplify
+    "I",        # isort
+    "PD",       # pandas-vet
+    "E",        # pycodestyle
+    "W",
+    "D",        # pydocstyle
+    "F",        # Pyflakes
+    "PL",       # Pylint
+    "UP",       # pyupgrade
+]
+ignore = [
+    "D100",     # Missing docstring in public module
+    "D101",     # Missing docstring in public class
+    "D102",     # Missing docstring in public method
+    "D103",     # Missing docstring in public function
+    "D104",     # Missing docstring in public package
+    "D105",     # Missing docstring in magic method
+    "D107",     # Missing docstring in `__init__`
+    "PLR0913",  # Too many arguments in function definition (6 > 5)
+]
+
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.isort]
+known-first-party = ["feedback"]
