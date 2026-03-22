@@ -38,7 +38,10 @@ function TrainedComponent() {
 
       navigate({
         to: "/feedback",
-        state: { annotations, userId },
+        search: {
+          annotations,
+          userId,
+        },
       });
     } catch (e) {
       setError("Something went wrong. Please try again.");
@@ -57,7 +60,9 @@ function TrainedComponent() {
           files={file}
           onFilesChange={setFile}
         />
-        {error && <p className="text-red-400 text-sm text-center mt-4">{error}</p>}
+        {error && (
+          <p className="text-red-400 text-sm text-center mt-4">{error}</p>
+        )}
         <div className="flex justify-center mt-6">
           <button
             onClick={handleSubmit}
