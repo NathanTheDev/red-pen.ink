@@ -30,3 +30,10 @@ uvicorn feedback.app:app --port 8080
 ```
 
 > Windows: `.venv\Scripts\activate`
+
+# Frontend Setup
+```bash
+cd frontend
+npm i
+npm run dev
+```
